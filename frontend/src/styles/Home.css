@@ -1,0 +1,251 @@
+/* Main Container */
+.home-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, rgba(255, 152, 57, 0.7), rgba(33, 150, 243, 0.7)), 
+              url('https://www.campustimespune.com/wp-content/uploads/2015/03/PICT-College-Building-Pune.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Navigation Bar */
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 5%;
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-left h2 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.history-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: transparent;
+  border: none;
+  color: #333;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.history-button svg {
+  width: 24px;
+  height: 24px;
+  fill: #FF9839;
+}
+
+.history-button:hover {
+  color: #FF9839;
+}
+
+.logout-button {
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  background-color: #FF9839;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #e6892f;
+}
+
+/* Main Content Container */
+.meetContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 5%;
+  flex-grow: 1;
+}
+
+.leftPanel {
+  flex: 1;
+  max-width: 50%;
+}
+
+.leftPanel h2 {
+  font-size: 2.5rem;
+  color: #333; /* Changed from #ffffff to #333 for better visibility */
+  margin-bottom: 2rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.input-group {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-end;
+}
+
+.input-wrapper {
+  flex: 1;
+}
+
+.input-wrapper label {
+  display: block;
+  text-align: left;
+  margin-bottom: 0.5rem;
+  color: #333; /* Changed from #ffffff to #333 for better visibility */
+  font-size: 0.9rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.input-wrapper input:focus {
+  outline: none;
+  border-color: #FF9839;
+  box-shadow: 0 0 5px rgba(255, 152, 57, 0.3);
+}
+
+.join-button {
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  background-color: #FF9839;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.join-button:hover {
+  background-color: #e6892f;
+}
+
+.rightPanel {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.rightPanel img {
+  max-width: 100%;
+  height: auto;
+  max-height: 400px;
+}
+
+/* Responsive Design */
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+  .navBar {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav-right {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .meetContainer {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 5%;
+  }
+
+  .leftPanel {
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .leftPanel h2 {
+    font-size: 2rem;
+    color: #333; /* Ensure visibility on smaller screens */
+  }
+
+  .input-group {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .input-wrapper {
+    width: 100%;
+  }
+
+  .input-wrapper label {
+    color: #333; /* Ensure visibility on smaller screens */
+  }
+
+  .join-button {
+    width: 100%;
+    padding: 0.8rem;
+  }
+
+  .rightPanel img {
+    max-height: 300px;
+  }
+}
+
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
+  .nav-left h2 {
+    font-size: 1.5rem;
+  }
+
+  .history-button {
+    font-size: 0.9rem;
+  }
+
+  .history-button svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .logout-button {
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .leftPanel h2 {
+    font-size: 1.8rem;
+    color: #333; /* Ensure visibility on smaller screens */
+  }
+
+  .input-wrapper label {
+    font-size: 0.8rem;
+    color: #333; /* Ensure visibility on smaller screens */
+  }
+
+  .input-wrapper input {
+    font-size: 0.9rem;
+  }
+
+  .join-button {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+
+  .rightPanel img {
+    max-height: 200px;
+  }
+}

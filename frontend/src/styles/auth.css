@@ -1,0 +1,246 @@
+/* Main Container */
+.auth-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(255, 152, 57, 0.7), rgba(33, 150, 243, 0.7)), 
+              url('https://www.campustimespune.com/wp-content/uploads/2015/03/PICT-College-Building-Pune.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Form Container */
+.auth-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.95);
+  max-width: 400px;
+  width: 100%;
+  margin: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  position: relative; /* For loader positioning */
+}
+
+/* Form Box */
+.auth-form-box {
+  width: 100%;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Loader */
+.auth-loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  border: 4px solid #FF9839;
+  border-top: 4px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  z-index: 10;
+}
+
+@keyframes spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Avatar Styles */
+.auth-avatar {
+  width: 40px;
+  height: 40px;
+  background-color: #FF9839;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 1.5rem;
+}
+
+.auth-avatar svg {
+  width: 24px;
+  height: 24px;
+  fill: #ffffff;
+}
+
+/* Button Group for Sign In/Sign Up */
+.auth-button-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.auth-button-group button {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #FF9839;
+  background-color: transparent;
+  color: #FF9839;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.auth-button-group button.active {
+  background-color: #FF9839;
+  color: #ffffff;
+}
+
+.auth-button-group button:hover {
+  background-color: rgba(255, 152, 57, 0.1);
+}
+
+.auth-button-group button.active:hover {
+  background-color: #e6892f;
+}
+
+.auth-button-group button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Form Input Fields */
+.auth-form div {
+  margin-bottom: 1.2rem;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.auth-form input:focus {
+  outline: none;
+  border-color: #FF9839;
+  box-shadow: 0 0 5px rgba(255, 152, 57, 0.3);
+}
+
+.auth-form input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.auth-form label {
+  display: block;
+  text-align: left;
+  margin-bottom: 0.5rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Error Message */
+.auth-error {
+  color: #d32f2f;
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+}
+
+/* Submit Button */
+.auth-submit-button {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  background-color: #FF9839;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 1.5rem;
+}
+
+.auth-submit-button:hover {
+  background-color: #e6892f;
+}
+
+.auth-submit-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Snackbar */
+.auth-snackbar {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #FF9839;
+  color: #ffffff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+  .auth-form-container {
+    max-width: 90%;
+    margin: 1rem;
+  }
+
+  .auth-form-box {
+    padding: 1.5rem;
+  }
+
+  .auth-button-group button {
+    font-size: 0.9rem;
+  }
+
+  .auth-submit-button {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
+  .auth-form-box {
+    padding: 1rem;
+  }
+
+  .auth-button-group {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .auth-button-group button {
+    width: 100%;
+    font-size: 0.85rem;
+  }
+
+  .auth-form input {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .auth-error {
+    font-size: 0.8rem;
+  }
+
+  .auth-submit-button {
+    padding: 0.5rem;
+    font-size: 0.85rem;
+  }
+
+  .auth-loader {
+    width: 30px;
+    height: 30px;
+    border-width: 3px;
+  }
+}
