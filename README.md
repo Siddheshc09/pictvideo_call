@@ -2,7 +2,8 @@
 
 **Live demo:** https://pictvideo-call.onrender.com/
 
-PictVideo Call is a [short 1–2 line description of your project — e.g. a lightweight video call app built with ...].  
+PictVideo Call is a simple real-time video calling application built using WebRTC, Node.js, Express, and Socket.io.
+  
 (Tech stack, features: e.g. WebRTC, React, Node/Express, deployed on Render.)
 
 ## How to run locally
